@@ -13,6 +13,10 @@
         <!-- Header -->
         <header class="header">
             <div class="brand">
+                <!-- Sidebar Menu -->
+                <button onclick="openMenu()">
+                    &#9776;
+                </button>
                 <a href="./index.html">Jaden's Webstore</a>
             </div>
             <div class="header-links">
@@ -20,6 +24,21 @@
                 <a href="signin.html">Sign In</a>
             </div>
         </header>
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+            <ul>
+                <li>
+                    <a href="index.html">Home and Office</a>
+                </li>
+
+                <li>
+                    <a href="index.html">Toys</a>
+                </li>
+
+            </ul>
+        </aside>
         <!-- Main Section -->
         <main class="main">
             <div class="content">
@@ -112,6 +131,15 @@
             All Rights Reserved &copy 2020
         </footer>
     </div>
+    <script>
+        function openMenu() {
+            document.querySelector(".sidebar").classList.add("open");
+        }
+
+        function closeMenu() {
+            document.querySelector(".sidebar").classList.remove("open")
+        }
+    </script>
 </body>
 
 </html>
